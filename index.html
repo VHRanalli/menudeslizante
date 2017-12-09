@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Deslizante</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		$('nav#navigation ul li a').hover(function(){
+			var newWidth = $(this).width()+ 70;
+			var newLeft = $(this).position().left;
+
+			$('span.line').stop().animate({
+				width: newWidth,
+				left: newLeft
+			}, 300);
+
+
+		});
+	});
+
+	</script>
+	
+
+
+</head>
+<body>
+	<nav id="navigation">
+		<span class="line"></span>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">A Empresa</a></li>
+			<li><a href="#">Produtos</a></li>
+			<li><a href="#">Serviços</a></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
